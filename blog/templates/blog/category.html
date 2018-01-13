@@ -1,0 +1,12 @@
+{% extends "msite/header.html" %}
+
+{% block content %}
+
+<h2>Zawartość kategorii</h2></br></br>
+
+  {% for post in object_list %}
+    <h5>{{ post.date|date:"Y-m-d" }} <b><a href="/blog/{{post.id}}"> {{post.title}} </a></b></h5>
+    <!-- <h5>{{ post.tags }}</h5> -->
+  {% endfor %}
+
+{% endblock%}

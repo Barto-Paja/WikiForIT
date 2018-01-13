@@ -1,0 +1,11 @@
+{% extends "msite/header.html" %}
+{% load staticfiles %}
+
+{% block content %}
+  <h3>{{post.title}}</h3>
+  <h6>data: {{post.date}}</h6>
+  <h6>tag: {{post.tags}}</h6>
+
+  {{post.body|safe|linebreaks}}
+
+{% endblock %}
